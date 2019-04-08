@@ -7,7 +7,7 @@
         <b-row>
           <b-col md="3" sm="12" class=" mb-3 pt-5 text-left">
             <div class="font-weight-bold footer-heading " v-for="card in cards" v-bind:key="card.index">  
-              <b-img :src="card.img"  alt="Card image cap"/>
+              <b-img :src="card.img"  class="logo-footer" alt="Card image cap"/>
               </div>
             <span class="footer-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -69,7 +69,7 @@
                     </li>
                     <li class="li-space">
                       <span class="footer-text">5 movies to watch this week </span>
-                       <span class="text-wsecondary  footer-text1">December 20,2016</span>
+                       <span class="text-secondary  footer-text1">December 20,2016</span>
                     </li>
                    
                   </ul>
@@ -150,7 +150,11 @@ export default {
 
 <style lang="scss" scoped>
  @import "../assets/scss/movie.scss";
-
+.logo-footer
+{
+    height: 46px;
+    padding-bottom: 6px;
+}
 .social-icon
 {
    width: 30px;
@@ -188,9 +192,7 @@ export default {
     list-style: none;
   }
  
-  .bottom-border {
-    border-bottom: 2px solid #80808040;
-  }
+ 
   .footer-heading {
     font-size: 22px;
     color:#fff;
@@ -206,7 +208,7 @@ export default {
   }
   .tel-color
   {
-  color:orange;
+  color:#f97e2a;
   }
   .link-footer a
   {
@@ -218,10 +220,14 @@ export default {
   {
     font-size:12px;
     color: $color;
-
-  
   }
  .form-control
+ {
+   background-color:$color ;
+   height:auto;
+   padding:0;
+ }  
+ .form-control:focus
  {
    background-color:$color ;
  }  
@@ -229,6 +235,7 @@ export default {
  {
    color: $color;
  }
+
  .input-group-text
  {
    background-color:$color;

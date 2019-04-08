@@ -3,15 +3,37 @@
     <b-row>
       <div class="p-5 mx-5">
         <b-tabs content-class="mt-3">
-          <b-tab title="Now Playing " class="tile-tab" active> 
+          <b-tab title="Now Playing  /" class="tile-tab" active>
             <b-container>
               <b-row>
                 <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
                   <div class="card border-0">
+                    <div class="box-count"><span class="text-white"> 0 </span></div>
+                    <b-img :src="card.img" class="img-style mx-auto" alt="Card image cap"/>
+                    
+                    <div class="card-body p-0 text-left">
+                      <div class="card-title font-weight-bold text-dark">{{card.title}}</div>
+                      <div class="card-subtitle mt-3 text-muted">{{card.subtitle}}</div>
+
+                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
+                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
+                    </div>
+                  </div>
+                </b-col>
+              </b-row>
+            </b-container>
+          </b-tab>
+
+          <b-tab title="Opening this week  /">
+            <b-container>
+              <b-row>
+                <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
+                 <div class="card border-0">
+                    <div class="box-count"><span class="text-white"> 0 </span></div>
                     <b-img :src="card.img" class="img-style mx-auto" alt="Card image cap"/>
                     <div class="card-body p-0 text-left">
                       <div class="card-title font-weight-bold text-dark">{{card.title}}</div>
-                      <div class="card-subtitle text-muted">{{card.subtitle}}</div>
+                      <div class="card-subtitle mt-3 text-muted">{{card.subtitle}}</div>
 
                       <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
                       <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
@@ -21,37 +43,19 @@
               </b-row>
             </b-container>
           </b-tab>
-
-          <b-tab title="Opening this week ">
+          <b-tab title="Coming Soon   ">
             <b-container>
               <b-row>
                 <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
-                  <div class="card border-0">
+                <div class="card border-0">
+                   <div class="box-count"><span class="text-white"> 0 </span></div>
                     <b-img :src="card.img" class="img-style mx-auto" alt="Card image cap"/>
-                    <div class="card-body text-center">
-                      <div class="h5 card-title">{{card.title}}</div>
-                      <div class="card-subtitle mb-2 text-muted">{{card.subtitle}}</div>
+                    <div class="card-body p-0 text-left">
+                      <div class="card-title font-weight-bold text-dark">{{card.title}}</div>
+                      <div class="card-subtitle mt-3 text-muted">{{card.subtitle}}</div>
 
-                       <a href="#" class="card-link">{{card.link}}</a>
-                      <a href="#" class="card-link"> {{card.link}}</a>
-                    </div>
-                  </div>
-                </b-col>
-              </b-row>
-            </b-container>
-          </b-tab>
-          <b-tab title="Coming Soon  ">
-            <b-container>
-              <b-row>
-                <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
-                  <div class="card border-0">
-                    <b-img :src="card.img" class="img-style mx-auto" alt="Card image cap"/>
-                    <div class="card-body text-center">
-                      <div class="h5 card-title">{{card.title}}</div>
-                      <div class="card-subtitle text-muted">{{card.subtitle}}</div>
-
-                      <a href="#" class="card-link1">{{card.link}}</a>
-                      <a href="#" class="card-link"> {{card.link}}</a>
+                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
+                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
                     </div>
                   </div>
                 </b-col>
@@ -116,10 +120,20 @@ export default {
 };
 </script> 
 
-   <style lang="scss" scoped>
+<style lang="scss" scoped>
+.box-count
+{
+  width:20px;
+  height:20px;
+  position: relative;
+  bottom:-49px;
+  left:138px;
+  background-color: #f97e2a;
+}
 .img-style {
   width: 100%;
   height: 300px;
+  border-bottom: 2px solid #f97e2a;
 }
 @media (min-width: 768px) {
   .col-md-3 {
@@ -148,7 +162,7 @@ export default {
  <style>
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #e16424 !important;
+  color: #f97e2a !important;
   font-size: 20px;
   font-weight: bold;
 }

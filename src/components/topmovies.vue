@@ -2,29 +2,29 @@
 <b-container>
  <b-row>
    <div class="top-part px-5 ">
-     <b-row class="mt-3">
+     <b-row class="mt-3 top-movie-padding">
    
        <b-col md="2">
-           <span ><font-awesome-icon class="text-secondary" :icon="['fas', 'film']" /></span>
-         <div class="text-secondary">
+           <span ><font-awesome-icon class="top-color-tab" :icon="['fas', 'film']" /></span>
+         <div class="top-color-tab">
           Cinemas
          </div>
        </b-col>
          <b-col md="2">
-           <span ><font-awesome-icon class="text-secondary" :icon="['fas', 'gift']" /></span>
-          <div class="text-secondary">
+           <span ><font-awesome-icon class="top-color-tab" :icon="['fas', 'gift']" /></span>
+          <div class="top-color-tab">
             Promotion
          </div>
        </b-col>
          <b-col md="3">
-           <span><font-awesome-icon class="text-secondary" :icon="['fas', 'tags']" /></span>
-            <div class="text-secondary">
+           <span><font-awesome-icon class="top-color-tab" :icon="['fas', 'tags']" /></span>
+            <div class="top-color-tab">
               Vouchers & Cards
          </div>
        </b-col>
         <b-col md="2">
-          <span ><font-awesome-icon class="text-secondary" :icon="['fas', 'ticket-alt']" /></span>
-            <div class="text-secondary">
+          <span ><font-awesome-icon class="top-color-tab" :icon="['fas', 'ticket-alt']" /></span>
+            <div class="top-color-tab">
              Buy Tickets
          </div>
           </b-col>
@@ -43,7 +43,7 @@
   <md-card class="topmoviebanner mb-5">
     <md-card-actions>
       <div class="md-subhead">
-        <span class="top-movie-heading">TOP MOVIES IN THREATER</span>
+        <span class="top-movie-heading">Top movies in theatres</span>
       
       </div>
     
@@ -201,13 +201,17 @@ import img5 from "../assets/images/card6.jpg";
 .card{
   background-color: unset!important;
 }
+.top-color-tab
+{
+  color:#bdbdbd;
+}
 .pop-style
 {
   width:100px;
   height:100px;
   border-radius:50%;
   margin: -64px 0;
-  border:2px solid orangered;
+  border:2px solid #fff;
 }
 .overlay-text
 {
@@ -222,7 +226,7 @@ import img5 from "../assets/images/card6.jpg";
    opacity:1;
     position: relative;
     top: -71px;
-    background: #e16424bf;
+    background: #b97b2a;
     width: 161px;
     font-size: 20px;
     padding: 0 0 0 0;
@@ -243,20 +247,20 @@ import img5 from "../assets/images/card6.jpg";
   }
  .top-movie-heading
  {
-   color:#e16424;
-   font-size:20px;
+   color:#f97e2a;
+   font-size:25px;
    font-weight:bold;
  
  }
 .md-subhead
 {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .topmoviebanner
 {
     background: url("../assets/images/newbanner1.jpg");
     width:100%;
-    height:470px;
+    height:490px;
 }
 .img-style {
   width: 161px;
@@ -280,7 +284,7 @@ import img5 from "../assets/images/card6.jpg";
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #e16424 !important;
+  color: #f97e2a !important;
   font-size: 20px;
   font-weight: bold;
 }
@@ -294,6 +298,10 @@ import img5 from "../assets/images/card6.jpg";
   width:100%;
   background-color:#efefef;
   height:70px;
+}
+.top-movie-padding
+{
+ padding:0 119px 0 182px;
 }
 </style>
              

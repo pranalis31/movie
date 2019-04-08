@@ -1,7 +1,7 @@
 <template>
     <b-container class="margin-top-new"> 
         <b-row class="px-5 mx-5 pb-5">
-            <b-col md="12" class="news-heading-style text-center font-weight-bold ">Latest News</b-col>
+            <b-col md="12" class="news-heading-style text-center pb-3 font-weight-bold ">Latest News</b-col>
             
               
              <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
@@ -142,10 +142,15 @@ export default {
    border-color: #f97e2a;
    border-radius: 50px;
    font-weight: bold;
+   height:20px;
+}
+.button-style:active
+{
+  border:none;
 }
 .margin-top-new
 {
-  margin-top: -154px;
+  margin-top: -149px;
 }
 .card-title {
     margin-bottom: 0.75rem;
