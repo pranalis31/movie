@@ -10,7 +10,7 @@
                     <div class="card-body pt-2 pl-0">
                       <div class=" card-title">{{card.title}}</div>
                    
-                     <b-button href="#" class="button-style">Read More</b-button>  
+                     <button href="#" class="button-style">Read More</button>  
                      
                     </div>
                   </div>
@@ -19,7 +19,7 @@
                     <div class="card-body pt-2 pl-0">
                       <div class="card-title">{{card.title}}</div>
                      
-                     <b-button href="#" class="button-style" >Read More</b-button>  
+                     <button href="#" class="button-style" >Read More</button>  
                      
                     </div>
                   </div>
@@ -31,7 +31,7 @@
                     <div class="card-body pt-2 text-center">
                       <div class=" card-title">{{card.title}}</div>
                         <div class=" card-subtitle">{{card.subtitle}}</div>
-                     <b-button href="#" class="button-style" >Read More</b-button>  
+                     <button href="#" class="button-style" >Read More</button>  
                      
                     </div>
                   </div>
@@ -42,7 +42,7 @@
                     <div class="card-body pt-2 pl-0">
                       <div class=" card-title">{{card.title}}</div>
                      
-                     <b-button href="#" class="button-style" >Read More</b-button>  
+                     <button href="#" class="button-style" >Read More</button>  
                      
                     </div>
                   </div>
@@ -51,7 +51,7 @@
                     <div class="card-body pt-2 pl-0">
                       <div class=" card-title">{{card.title}}</div>
                    
-                     <b-button href="#" class="button-style" >Read More</b-button>  
+                     <button href="#" class="button-style" >Read More</button>  
                      
                     </div>
                   </div>
@@ -136,11 +136,11 @@ export default {
   height: 300px;
 }
 .button-style{
-   background-color: #f97e2a !important;
-   font-size: 9px !important;
-   color:#ffff !important;
-   border-color: #f97e2a !important;
-   border-radius: 50px !important;
+   background-color: #f97e2a;
+   font-size: 9px ;
+   color:#ffff ;
+   border-color: #f97e2a;
+   border-radius: 50px;
    font-weight: bold;
 }
 .margin-top-new

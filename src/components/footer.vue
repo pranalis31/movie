@@ -149,6 +149,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ @import "../assets/scss/movie.scss";
 
 .social-icon
 {
@@ -170,7 +171,7 @@ export default {
 .li-space
 {
   margin:12px 0;
-  color:#bdbdbd;
+  color :$color;
 }
 .footer-background
 {
@@ -201,7 +202,7 @@ export default {
   .footer-paragraph
   {
       font-size:12px;
-     color:#bdbdbd;
+     color:$color;
   }
   .tel-color
   {
@@ -216,20 +217,21 @@ export default {
   .footer-text
   {
     font-size:12px;
-    color:#ccc;
+    color: $color;
+
   
   }
  .form-control
  {
-   background-color: #bdbdbd ;
+   background-color:$color ;
  }  
  .footer-email-color
  {
-   color: #bdbdbd;
+   color: $color;
  }
  .input-group-text
  {
-   background-color:#bdbdbd;
+   background-color:$color;
  }
 </style>
 

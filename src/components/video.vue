@@ -1,6 +1,7 @@
 <template>
 <b-container>
     <b-row>
+    
       <b-col md="6">
         <div>
           <span class="video-style text-left">Videos and Photos</span>

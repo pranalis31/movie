@@ -28,9 +28,10 @@
 
 
  <style lang="scss" scoped>
+ @import "../assets/scss/movie.scss";
 .head-top
 {
-    background-color: #000;
+    background-color:$head-top-bg-color;
   
     height:30px;
 
@@ -38,20 +39,20 @@
 
 .color-top
 {
-     background-color:  #9C27B0;
+     background-color: $color-top-bg;
    
     height:30px;
 }
 .vip-head
 {
      font-size: 12px;
-    color: #fff;
+    color:$viz-head-color;
     font-weight: bold;
     text-align: center;
 }
 .head-shop
 {
-    color:#e16424;
+    color:$head-shop-color;
    font-size: 10px;
     font-weight: bold;
 }

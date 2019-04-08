@@ -94,7 +94,9 @@
   }
 </script>
 
-<style lang="css">
+<style lang="scss">
+ @import "../assets/scss/movie.scss";
+
 .carousel-indicators li {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -106,7 +108,7 @@
     border-radius: 50% !important;
     text-indent: -999px;
     cursor: pointer;
-    background-color:#fff!important;
+    background-color:$background-color !important;
     background-clip: padding-box;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
