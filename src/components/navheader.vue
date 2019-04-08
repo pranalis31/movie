@@ -73,7 +73,7 @@ export default {
 }
 .img-style
 {
-  
+  margin: 0 40px 0 -30px;
   height:43px;
 }
 .search-box

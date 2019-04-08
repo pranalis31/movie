@@ -2,7 +2,7 @@
 <b-container>
     <b-row>
     
-      <b-col md="6">
+      <b-col md="6" cols="12">
         <div>
           <span class="video-style text-left">Videos and Photos</span>
           <div class="px-5  mt-2 mx-5">
@@ -27,7 +27,7 @@
       <b-col md="6" >
           <div>
             <b-row>
-          <b-col md="4" v-for="image in images" v-bind:key="image.index">
+          <b-col md="4" cols="4" v-for="image in images" v-bind:key="image.index">
             
                                 <div class="img-display">
                                   <figure >
@@ -131,5 +131,20 @@ figure
 .video-paragraph
 {
   font-size: 13px;
+}
+@media screen and (max-width: 700px) {
+  .video-style {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f97e2a;
+    margin: 0 0 0 0;
+  }
+  .figure
+  {
+       margin: 0 0 1px -15px !important;
+  }
+  .figure1{
+    margin: 0;
+  }
 }
 </style>

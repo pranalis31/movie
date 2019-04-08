@@ -153,7 +153,7 @@ export default {
 .logo-footer
 {
     height: 46px;
-    padding-bottom: 6px;
+    padding-bottom: 7px;
 }
 .social-icon
 {

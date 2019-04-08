@@ -303,6 +303,25 @@ import img5 from "../assets/images/card6.jpg";
 {
  padding:0 119px 0 182px;
 }
+@media screen and (max-width: 700px) {
+  .top-part
+  {
+    width: 100%;
+    background-color: #efefef;
+    height: auto;
+}
+  .pop-style {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: -3px 0 -24px 0;
+    border: 2px solid orangered;
+}
+.top-movie-padding
+{
+  padding: 0;
+}
+}
 </style>
              
  

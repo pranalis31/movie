@@ -65,5 +65,27 @@
 {
     font-size: 12px;
 }
+@media screen and (max-width: 700px) {
+ .head-top
+ {
+     background-color: #000;
+    width: 100%;
+     height:auto;
+ }
+ .movie-font
+ {
+     margin-left:0;
+ }
+ .navbar-toggler
+ {
+   background-color:none;
+
+ }
+ .color-top
+ {
+     background-color: #99689b;
+    height: auto;
+ }
+}
 
 </style>
