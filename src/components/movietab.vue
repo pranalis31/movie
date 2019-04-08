@@ -9,7 +9,7 @@
                 <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
                   <div class="card border-0">
                     <b-img :src="card.img" class="img-style mx-auto" alt="Card image cap"/>
-                    <div class="card-body text-center">
+                    <div class="card-body p-0 text-left">
                       <div class="card-title font-weight-bold text-dark">{{card.title}}</div>
                       <div class="card-subtitle text-muted">{{card.subtitle}}</div>
 

@@ -7,7 +7,7 @@
              <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
                   <div class="card border-0">
                     <b-img :src="card.img" class="img-style-card mx-auto" alt="Card image cap"/>
-                    <div class="card-body pt-2 text-center">
+                    <div class="card-body pt-2 pl-0">
                       <div class=" card-title">{{card.title}}</div>
                    
                      <b-button href="#" class="button-style">Read More</b-button>  
@@ -16,7 +16,7 @@
                   </div>
                    <div class="card border-0">
                     <b-img :src="card.img" class="img-style-card mx-auto" alt="Card image cap"/>
-                    <div class="card-body pt-2 text-center">
+                    <div class="card-body pt-2 pl-0">
                       <div class="card-title">{{card.title}}</div>
                      
                      <b-button href="#" class="button-style" >Read More</b-button>  
@@ -39,7 +39,7 @@
              <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
                   <div class="card border-0">
                     <b-img :src="card.img" class="img-style-card  mx-auto" alt="Card image cap"/>
-                    <div class="card-body pt-2 text-center">
+                    <div class="card-body pt-2 pl-0">
                       <div class=" card-title">{{card.title}}</div>
                      
                      <b-button href="#" class="button-style" >Read More</b-button>  
@@ -48,7 +48,7 @@
                   </div>
                    <div class="card border-0">
                     <b-img :src="card.img" class="img-style-card  mx-auto" alt="Card image cap"/>
-                    <div class="card-body pt-2 text-center">
+                    <div class="card-body pt-2 pl-0">
                       <div class=" card-title">{{card.title}}</div>
                    
                      <b-button href="#" class="button-style" >Read More</b-button>  
@@ -149,7 +149,7 @@ export default {
 }
 .card-title {
     margin-bottom: 0.75rem;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: bold;
     color:#000;
 }

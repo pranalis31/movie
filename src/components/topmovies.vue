@@ -227,6 +227,7 @@ import img5 from "../assets/images/card6.jpg";
     font-size: 20px;
     padding: 0 0 0 0;
     text-align: center;
+    transition: 0.7s ease;
  
   }
 }

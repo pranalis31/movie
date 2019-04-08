@@ -1,9 +1,8 @@
 <template>
-  <b-container>
-      <b-row>
-       <div class="head-top px-5 mt-5">
+ 
+       <div class="head-top px-5 ">
          
-        <div class="px-5">
+        <div class="px-5 mx-5">
             <b-row>
             <b-col md="2" class="color-top">
              <span class="vip-head">VIP SWEEPSTACKS</span>
@@ -22,9 +21,7 @@
 
 
        </div>
-      </b-row>
-
-  </b-container>  
+     
 </template>
 
 
@@ -34,7 +31,7 @@
 .head-top
 {
     background-color: #000;
-    width:100%;
+  
     height:30px;
 
 }

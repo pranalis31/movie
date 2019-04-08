@@ -10,10 +10,10 @@
      
 
       <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-3">
+      <b-navbar-nav class="ml-5">
         <b-nav-form>
           <b-form-input size="sm" class="mr-sm-2 search-box" placeholder="Movic Search..."></b-form-input>
-          <b-button size="sm" class="my-2 my-sm-0 go-button"  type="submit">Go</b-button>
+          <button size="sm" class="go-button"  type="submit">GO</button>
         </b-nav-form>
 
         </b-navbar-nav>
@@ -63,11 +63,13 @@ export default {
 .go-button
 {
    
-    border-radius: 50% !important;
-    background-color: #f97e2a!important;
+    border-radius: 50% ;
+    background-color: #f97e2a;
     color:#fff;
-    border-color: #f97e2a!important;
     font-weight: bold;
+    font-size: 10px;
+    width: 35px;
+    height: 35px;
 }
 .img-style
 {
@@ -82,11 +84,12 @@ export default {
 {
   font-size: 13px;
   font-weight: bold;
-  margin-left: 4.7rem;
+  margin-left: 4.3rem;
 }
 .active
 {
   
   border-bottom: 3px solid #f97e2a;
 }
+
 </style>

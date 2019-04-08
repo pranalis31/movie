@@ -5,7 +5,7 @@
         <div>
           <span class="video-style text-left">Videos and Photos</span>
           <div class="px-5  mt-2 mx-5">
-            <div>
+            <div class="text-left">
               <b-embed
                 type="iframe"
                 aspect="1by1"

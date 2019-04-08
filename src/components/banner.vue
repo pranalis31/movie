@@ -1,6 +1,5 @@
 <template>
-<b-container>
-    <b-row>
+
   <div class="">
     <b-carousel
       id="carousel-1"
@@ -72,8 +71,7 @@
 
    
   </div>
-    </b-row>
-</b-container>
+   
 </template>
 
 <script>

@@ -1,7 +1,6 @@
 <template>
   <div>
-      <b-container>
-          <b-row>
+   
     <footer class="footer-background">
       <b-container  class="px-5">
         <div class="mx-5">
@@ -10,7 +9,7 @@
             <div class="font-weight-bold footer-heading " v-for="card in cards" v-bind:key="card.index">  
               <b-img :src="card.img"  alt="Card image cap"/>
               </div>
-            <span class="footer-paragraph  text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            <span class="footer-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
               .</span>
                 <div class="rating-numbers">
@@ -46,16 +45,16 @@
                   <div class=" font-weight-bold footer-column-title text-white">Custom Services</div>
                   <ul class="text-left p-0">
                     <li class="li-space">
-                      <a class="text-white  footer-text" href="#">Help & contact</a>
+                      <a class=" footer-text" href="#">Help & contact</a>
                     </li>
                     <li class="li-space"> 
-                      <a class="text-white   footer-text" href="#">Return policy</a>
+                      <a class="footer-text" href="#">Return policy</a>
                     </li>
                     <li class="li-space">
-                      <a class="text-white   footer-text" href="#">Feed Bock</a>
+                      <a class="footer-text" href="#">Feed Bock</a>
                     </li>
                     <li class="li-space">
-                      <a class="text-white   footer-text" href="#">Careers</a>
+                      <a class="footer-text" href="#">Careers</a>
                     </li>
                   </ul>
                 </div>
@@ -65,11 +64,11 @@
                   <div class="font-weight-bold footer-column-title text-white">Recent Post</div>
                   <ul class="text-left p-0">
                     <li class="li-space">
-                      <span class="text-white  footer-text">Doctor Strange assembles  </span>
+                      <span class=" footer-text">Doctor Strange assembles  </span>
                        <span class="text-secondary  footer-text1">December 20,2016</span>
                     </li>
                     <li class="li-space">
-                      <span class="text-white  footer-text">5 movies to watch this week </span>
+                      <span class="footer-text">5 movies to watch this week </span>
                        <span class="text-wsecondary  footer-text1">December 20,2016</span>
                     </li>
                    
@@ -80,9 +79,9 @@
                 <address class="pl-5">
                   <div class="text-left">
                     <div class="font-weight-bold text-white mb-4">Contact Us</div>
-                    <span class=" text-white footer-text">
-                      <div class=""><font-awesome-icon class="text-secondary" :icon="['fas', 'map-marker']" />  City Hall,212 Stree,Lawoma,735</div>
-                      <a href="email:abc@gmail.com" class="text-white"> <font-awesome-icon class="text-secondary" :icon="['fas', 'envelope']" />  abc@gmail.com</a><br>
+                    <span class="footer-text ">
+                      <div class=""> <font-awesome-icon class="text-secondary" :icon="['fas', 'map-marker']" />  City Hall,212 Stree,Lawoma,735</div>
+                      <a href="email:abc@gmail.com" class="footer-email-color"> <font-awesome-icon class="text-secondary" :icon="['fas', 'envelope']" />  abc@gmail.com</a><br>
                      <a href="tel:987678990" class="li-space tel-color"><font-awesome-icon class="text-secondary" :icon="['fas', 'phone']" />  9876-78990</a> <br/>
                        <div class="input-group mb-3 mt-3">
                          <input type="text" class="form-control " placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -99,8 +98,7 @@
           </b-col>
         </b-row>
    
-   
-        <b-row>
+         <b-row>
           <b-col cols="6">
             <div class=" text-sm text-left">
               <div class="mb-1 pb-2  footer-text">
@@ -120,10 +118,12 @@
           </b-col>
         </b-row>
         </div>
+    
       </b-container>
     </footer>
-          </b-row>
-      </b-container>
+
+
+       
   </div>
 </template>
 
@@ -170,15 +170,16 @@ export default {
 .li-space
 {
   margin:12px 0;
+  color:#bdbdbd;
 }
 .footer-background
 {
    background: url("../assets/images/newbanner1.jpg");
    width:100%;
-   height:321px;
+ 
 }
 .footer-text {
-    text-decoration: none !important;
+    text-decoration: none ;
     font-size:12px;
     padding-bottom: 10px;
   }
@@ -200,7 +201,7 @@ export default {
   .footer-paragraph
   {
       font-size:12px;
-     
+     color:#bdbdbd;
   }
   .tel-color
   {
@@ -220,7 +221,15 @@ export default {
   }
  .form-control
  {
-   background-color: #ccc !important;
+   background-color: #bdbdbd ;
  }  
+ .footer-email-color
+ {
+   color: #bdbdbd;
+ }
+ .input-group-text
+ {
+   background-color:#bdbdbd;
+ }
 </style>
 
