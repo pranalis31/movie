@@ -95,29 +95,12 @@ export default {
           title: "Doctor strange Assembles With the Avengers"
         }
       ],
-      cards: [
-        {
-          img: imgnew,
-          title: "Doctor strange Assembles With the Avengers"
-        }
-      ],
+
       cardmiddle: [
         {
           img: latestimgmiddle,
           title: "Another Jurassic Park start joins Thor",
           subtitle: "Doctor strange Assembles With the AvengersDoctor strange "
-        }
-      ],
-      cards: [
-        {
-          img: imgnew,
-          title: "Doctor strange Assembles With the Avengers"
-        }
-      ],
-      cards: [
-        {
-          img: imgnew,
-          title: "Doctor strange Assembles With the Avengers"
         }
       ]
     };
