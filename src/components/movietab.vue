@@ -6,17 +6,44 @@
           <b-tab title="Now Playing  /" class="tile-tab" active>
             <b-container>
               <b-row>
-                <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
+                <b-col
+                  md="3"
+                  sm="12"
+                  v-for="card in cards"
+                  v-bind:key="card.index"
+                >
                   <div class="card border-0">
-                    <div class="box-count"><span class="text-white"> 0 </span></div>
-                    <b-img :src="card.img" class="img-style mx-auto" alt="Card image cap"/>
-                    
-                    <div class="card-body p-0 text-left">
-                      <div class="card-title font-weight-bold text-dark">{{card.title}}</div>
-                      <div class="card-subtitle mt-3 text-muted">{{card.subtitle}}</div>
+                    <div class="box-count">
+                      <span class="text-white"> 0 </span>
+                    </div>
+                    <b-img
+                      :src="card.img"
+                      class="img-style mx-auto"
+                      alt="Card image cap"
+                    />
 
-                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
-                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
+                    <div class="card-body p-0 text-left">
+                      <div class="card-title font-weight-bold text-dark">
+                        {{ card.title }}
+                      </div>
+                      <div class="card-subtitle mt-3 text-muted">
+                        {{ card.subtitle }}
+                      </div>
+
+                      <a href="#" class="card-link"
+                        ><font-awesome-icon
+                          class="text-secondary"
+                          :icon="['fas', 'circle']"
+                        />
+                        {{ card.link }}</a
+                      >
+                      <a href="#" class="card-link"
+                        ><font-awesome-icon
+                          class="text-secondary"
+                          :icon="['fas', 'circle']"
+                        />
+                        {{ card.link }}</a
+                      >
                     </div>
                   </div>
                 </b-col>
@@ -27,16 +54,43 @@
           <b-tab title="Opening this week  /">
             <b-container>
               <b-row>
-                <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
-                 <div class="card border-0">
-                    <div class="box-count"><span class="text-white"> 0 </span></div>
-                    <b-img :src="card.img" class="img-style mx-auto" alt="Card image cap"/>
+                <b-col
+                  md="3"
+                  sm="12"
+                  v-for="card in cards"
+                  v-bind:key="card.index"
+                >
+                  <div class="card border-0">
+                    <div class="box-count">
+                      <span class="text-white"> 0 </span>
+                    </div>
+                    <b-img
+                      :src="card.img"
+                      class="img-style mx-auto"
+                      alt="Card image cap"
+                    />
                     <div class="card-body p-0 text-left">
-                      <div class="card-title font-weight-bold text-dark">{{card.title}}</div>
-                      <div class="card-subtitle mt-3 text-muted">{{card.subtitle}}</div>
+                      <div class="card-title font-weight-bold text-dark">
+                        {{ card.title }}
+                      </div>
+                      <div class="card-subtitle mt-3 text-muted">
+                        {{ card.subtitle }}
+                      </div>
 
-                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
-                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
+                      <a href="#" class="card-link"
+                        ><font-awesome-icon
+                          class="text-secondary"
+                          :icon="['fas', 'circle']"
+                        />
+                        {{ card.link }}</a
+                      >
+                      <a href="#" class="card-link"
+                        ><font-awesome-icon
+                          class="text-secondary"
+                          :icon="['fas', 'circle']"
+                        />
+                        {{ card.link }}</a
+                      >
                     </div>
                   </div>
                 </b-col>
@@ -46,16 +100,43 @@
           <b-tab title="Coming Soon   ">
             <b-container>
               <b-row>
-                <b-col md="3" sm="12" v-for="card in cards" v-bind:key="card.index">
-                <div class="card border-0">
-                   <div class="box-count"><span class="text-white"> 0 </span></div>
-                    <b-img :src="card.img" class="img-style mx-auto" alt="Card image cap"/>
+                <b-col
+                  md="3"
+                  sm="12"
+                  v-for="card in cards"
+                  v-bind:key="card.index"
+                >
+                  <div class="card border-0">
+                    <div class="box-count">
+                      <span class="text-white"> 0 </span>
+                    </div>
+                    <b-img
+                      :src="card.img"
+                      class="img-style mx-auto"
+                      alt="Card image cap"
+                    />
                     <div class="card-body p-0 text-left">
-                      <div class="card-title font-weight-bold text-dark">{{card.title}}</div>
-                      <div class="card-subtitle mt-3 text-muted">{{card.subtitle}}</div>
+                      <div class="card-title font-weight-bold text-dark">
+                        {{ card.title }}
+                      </div>
+                      <div class="card-subtitle mt-3 text-muted">
+                        {{ card.subtitle }}
+                      </div>
 
-                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
-                      <a href="#" class="card-link"><font-awesome-icon class="text-secondary" :icon="['fas', 'circle']" /> {{card.link}}</a>
+                      <a href="#" class="card-link"
+                        ><font-awesome-icon
+                          class="text-secondary"
+                          :icon="['fas', 'circle']"
+                        />
+                        {{ card.link }}</a
+                      >
+                      <a href="#" class="card-link"
+                        ><font-awesome-icon
+                          class="text-secondary"
+                          :icon="['fas', 'circle']"
+                        />
+                        {{ card.link }}</a
+                      >
                     </div>
                   </div>
                 </b-col>
@@ -68,7 +149,7 @@
   </b-container>
 </template>
 
- <script>
+<script>
 import img1 from "../assets/images/card12.jpg";
 import img2 from "../assets/images/card4.jpeg";
 import img3 from "../assets/images/card2.jpg";
@@ -83,51 +164,47 @@ export default {
           title: "Victoria & Abu",
           subtitle: "Release 12 april 19",
           link: "trailer",
-          link1:"detroil"
+          link1: "detroil"
         },
         {
           img: img2,
           title: "Diamonds",
           subtitle: "Release 12 april 19",
           link: "trailer",
-          link1:"detroil"
-        
+          link1: "detroil"
         },
         {
           img: img3,
           title: "Aventures",
           subtitle: "Release 12 april 19",
-           link: "trailer",
-           link1:"detroil"
+          link: "trailer",
+          link1: "detroil"
         },
         {
           img: img4,
           title: "Fantastic",
           subtitle: "Release 12 april 19",
-          link: "trailer",
-        
+          link: "trailer"
         },
         {
           img: img5,
           title: "Grand Masti",
           subtitle: "Release 12 april 19",
-           link: "trailer",
-        
+          link: "trailer"
         }
       ]
     };
   }
 };
-</script> 
+</script>
 
 <style lang="scss" scoped>
-.box-count
-{
-  width:20px;
-  height:20px;
+.box-count {
+  width: 20px;
+  height: 20px;
   position: relative;
-  bottom:-49px;
-  left:138px;
+  bottom: -49px;
+  left: 138px;
   background-color: #f97e2a;
 }
 .img-style {
@@ -152,14 +229,13 @@ export default {
 .card-subtitle {
   font-size: 12px;
 }
-.card-link
-{
-  color:#000;
+.card-link {
+  color: #000;
   font-size: 12px;
 }
 </style>
-             
- <style>
+
+<style>
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #f97e2a !important;
@@ -171,13 +247,10 @@ export default {
   font-weight: bold;
   font-size: 20px;
 }
-.nav-tabs .nav-link
-{
-  border:none !important;
+.nav-tabs .nav-link {
+  border: none !important;
 }
-.nav-tabs
-{
-  border:none !important;
+.nav-tabs {
+  border: none !important;
 }
 </style>
-             

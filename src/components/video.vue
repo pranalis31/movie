@@ -1,7 +1,6 @@
 <template>
-<b-container>
+  <b-container>
     <b-row>
-    
       <b-col md="6" cols="12">
         <div>
           <span class="video-style text-left">Videos and Photos</span>
@@ -13,31 +12,36 @@
                 src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
                 allowfullscreen
               ></b-embed>
-                 <span class="video-heading font-weight-bold text-dark">10.Reo Speed Wagon </span>
-                 <span class="video-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                   Ut enim ad minim veniam, quis nostrud exercitation. </span>
+              <span class="video-heading font-weight-bold text-dark"
+                >10.Reo Speed Wagon
+              </span>
+              <span class="video-paragraph"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation.
+              </span>
             </div>
-              
           </div>
-       
         </div>
       </b-col>
 
-      <b-col md="6" >
-          <div>
-            <b-row>
-          <b-col md="4" cols="4" v-for="image in images" v-bind:key="image.index">
-            
-                                <div class="img-display">
-                                  <figure >
-                                  <b-img :src="image.img" class="img-size"  alt="img1"/>
-                                  </figure>
-                                  </div>
-                         
-          </b-col>
-            </b-row> 
-          </div>
+      <b-col md="6">
+        <div>
+          <b-row>
+            <b-col
+              md="4"
+              cols="4"
+              v-for="image in images"
+              v-bind:key="image.index"
+            >
+              <div class="img-display">
+                <figure>
+                  <b-img :src="image.img" class="img-size" alt="img1" />
+                </figure>
+              </div>
+            </b-col>
+          </b-row>
+        </div>
       </b-col>
     </b-row>
   </b-container>
@@ -54,54 +58,41 @@ import img7 from "../assets/images/gallery7.jpg";
 import img8 from "../assets/images/gallery8.jpg";
 import img9 from "../assets/images/gallery9.jpg";
 export default {
-    data() {
+  data() {
     return {
       images: [
         {
-          img:img1,
-        
+          img: img1
         },
-         {
-          img:img2,
-        
+        {
+          img: img2
         },
-         {
-          img:img3,
-        
+        {
+          img: img3
         },
-         {
-          img:img4,
-        
+        {
+          img: img4
         },
-         {
-          img:img5,
-        
+        {
+          img: img5
         },
-         {
-          img:img6,
-        
+        {
+          img: img6
         },
-         {
-          img:img7,
-        
+        {
+          img: img7
         },
-         {
-          img:img8,
-        
+        {
+          img: img8
         },
-         {
-          img:img9
-        
+        {
+          img: img9
         }
-      ],
-    }
-    }
-}
+      ]
+    };
+  }
+};
 </script>
-
-
-
-
 
 <style lang="scss">
 .video-style {
@@ -110,26 +101,21 @@ export default {
   color: #f97e2a;
   margin: 0 0 0 -135px;
 }
-.img-size
-{
-  width:189px;
-  height:114px;
+.img-size {
+  width: 189px;
+  height: 114px;
 }
-figure
-{
+figure {
   margin: 0 0 0.2rem -10rem !important;
 }
-.embed-responsive
-{
-  height:200px;
+.embed-responsive {
+  height: 200px;
   margin-bottom: 1rem;
 }
-.video-heading
-{
+.video-heading {
   margin: 0px 183px 0px 0px;
 }
-.video-paragraph
-{
+.video-paragraph {
   font-size: 13px;
 }
 @media screen and (max-width: 700px) {
@@ -139,11 +125,10 @@ figure
     color: #f97e2a;
     margin: 0 0 0 0;
   }
-  .figure
-  {
-       margin: 0 0 1px -15px !important;
+  .figure {
+    margin: 0 0 1px -15px !important;
   }
-  .figure1{
+  .figure1 {
     margin: 0;
   }
 }

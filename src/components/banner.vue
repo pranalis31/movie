@@ -1,5 +1,4 @@
 <template>
-
   <div class="">
     <b-carousel
       id="carousel-1"
@@ -20,7 +19,7 @@
         text="Nulla vitae elit libero, a pharetra augue mollis interdum."
         img-src="../assets/images/banner1.jpg"
       ></b-carousel-slide> -->
-       <b-carousel-slide>
+      <b-carousel-slide>
         <img
           slot="img"
           class="d-block img-fluid w-100"
@@ -28,11 +27,11 @@
           height="440"
           src="../assets/images/banner1.jpg"
           alt="image slot"
-        >
+        />
       </b-carousel-slide>
 
       <!-- Slides with custom text -->
-       <b-carousel-slide>
+      <b-carousel-slide>
         <img
           slot="img"
           class="d-block img-fluid w-100"
@@ -40,7 +39,7 @@
           height="440"
           src="../assets/images/banner2.jpg"
           alt="image slot"
-        >
+        />
       </b-carousel-slide>
       <!-- Slides with image only -->
       <b-carousel-slide>
@@ -51,7 +50,7 @@
           height="440"
           src="../assets/images/banner7.jpg"
           alt="image slot"
-        >
+        />
       </b-carousel-slide>
 
       <!-- Slides with img slot -->
@@ -64,58 +63,51 @@
           height="440"
           src="../assets/images/banner8.jpg"
           alt="image slot"
-        >
+        />
       </b-carousel-slide>
-
     </b-carousel>
-
-   
   </div>
-   
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        slide: 0,
-        sliding: null
-      }
-
-    },
-    methods: {
-      onSlideStart(slide) {
-        this.sliding = true
-      },
-      onSlideEnd(slide) {
-        this.sliding = false
-      }
-    }
+export default {
+  data() {
+    return {
+      slide: 0,
+      sliding: null
+    };
+  },
+  methods: {
+    // onSlideStart(slide) {
+    //   this.sliding = true;
+    // },
+    // onSlideEnd(slide) {
+    //   this.sliding = false;
+    // }
   }
+};
 </script>
 
 <style lang="scss">
- @import "../assets/scss/movie.scss";
+@import "../assets/scss/movie.scss";
 
 .carousel-indicators li {
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-    flex: 0 1 auto;
-    width: 20px !important;
-    height: 20px !important;
-    border-radius: 50% !important;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color:$background-color !important;
-    background-clip: padding-box;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    opacity: .5;
-    -webkit-transition: opacity 0.6s ease;
-    transition: opacity 0.6s ease;
-   
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -ms-flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  flex: 0 1 auto;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: $background-color !important;
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 </style>
-
