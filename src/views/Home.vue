@@ -25,6 +25,8 @@ import latestnew from "@/components/latestnew.vue";
 import news from "@/components/news.vue";
 import footersection from "@/components/footer.vue";
 
+
+
 export default {
   name: "home",
   components: {

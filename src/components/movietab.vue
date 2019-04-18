@@ -156,6 +156,7 @@ import img3 from "../assets/images/card2.jpg";
 import img4 from "../assets/images/card5.jpg";
 import img5 from "../assets/images/card6.jpg";
 
+import movieapi from '@/services/movieapi';
 
 export default {
   data() {
