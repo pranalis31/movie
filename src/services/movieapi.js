@@ -5,7 +5,9 @@ export default {
     console.log("movie api", infoUrl);
     return (
       axios
-        .get(`${"http://api.tvmaze.com/search/shows?" + "q="}${infoUrl}`)
+
+        .get(`${"https://www.themoviedb.org/search?" + "q="}${infoUrl}`)
+
         //     return axios({
         //             method: "get",
         //             url: "http://api.tvmaze.com/search/shows?" + "q=" + this.infoUrl

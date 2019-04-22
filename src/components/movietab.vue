@@ -3,13 +3,31 @@
     <b-row>
       <div class="p-5 mx-5">
         <b-tabs content-class="mt-3">
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              v-model="search_query"
+              v-on:keyup.enter="getapi(infoUrl)"
+            />
+            <button
+              class="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+              v-on:click="getapi(infoUrl)"
+            >
+              Search
+            </button>
+          </form>
+
           <b-tab title="Now Playing  /" class="tile-tab" active>
-            <b-container>
+            <b-container v-if="results.length > 0">
               <b-row>
                 <b-col
                   md="3"
                   sm="12"
-                  v-for="card in cards"
+                  v-for="card in results"
                   v-bind:key="card.index"
                 >
                   <div class="card border-0">
@@ -21,13 +39,14 @@
                       class="img-style mx-auto"
                       alt="Card image cap"
                     />
-
+                    <!-- path + card.poster_path -->
+                    <!-- :src="card.poster_path | serveimg" -->
                     <div class="card-body p-0 text-left">
                       <div class="card-title font-weight-bold text-dark">
                         {{ card.title }}
                       </div>
                       <div class="card-subtitle mt-3 text-muted">
-                        {{ card.subtitle }}
+                        {{ card.release_date }}
                       </div>
 
                       <a href="#" class="card-link"
@@ -35,24 +54,28 @@
                           class="text-secondary"
                           :icon="['fas', 'circle']"
                         />
-                        {{ card.link }}</a
-                      >
+                        {{ card.popularity }}
+                      </a>
+
                       <a href="#" class="card-link"
                         ><font-awesome-icon
                           class="text-secondary"
                           :icon="['fas', 'circle']"
                         />
-                        {{ card.link }}</a
-                      >
+                        {{ card.vote_count }}
+                      </a>
                     </div>
                   </div>
                 </b-col>
               </b-row>
             </b-container>
+            <div v-else>
+              No data found
+            </div>
           </b-tab>
 
           <b-tab title="Opening this week  /">
-            <b-container>
+            <b-container v-if="cards.length > 0">
               <b-row>
                 <b-col
                   md="3"
@@ -96,9 +119,12 @@
                 </b-col>
               </b-row>
             </b-container>
+            <div v-else>
+              No data found
+            </div>
           </b-tab>
           <b-tab title="Coming Soon   ">
-            <b-container>
+            <b-container v-if="cards.length > 0">
               <b-row>
                 <b-col
                   md="3"
@@ -142,6 +168,9 @@
                 </b-col>
               </b-row>
             </b-container>
+            <div v-else>
+              No data found
+            </div>
           </b-tab>
         </b-tabs>
       </div>
@@ -156,7 +185,9 @@ import img3 from "../assets/images/card2.jpg";
 import img4 from "../assets/images/card5.jpg";
 import img5 from "../assets/images/card6.jpg";
 
-import movieapi from '@/services/movieapi';
+import movieapi from "@/services/movieapi";
+
+import axios from "axios";
 
 export default {
   data() {
@@ -195,9 +226,88 @@ export default {
           subtitle: "Release 12 april 19",
           link: "trailer"
         }
-      ]
+      ],
+      results: [],
+      search_query: "",
+      status: "",
+      path: "https://image.tmdb.org/t/p/w300_and_h450_bestv2"
     };
+  },
+
+  mounted() {
+    movieapi.getmovies();
+    axios
+      .get(
+        "https://api.themoviedb.org/3/movie/popular?api_key=e93194759dc620e1ff7aa7c9fb0e02d8"
+      )
+
+      .then(response => {
+        console.log("movieapi", response.data.results);
+        this.results = response.data.results;
+        var i;
+        for (i = 0; i < this.results.length; i++) {
+          this.results[i].img =
+            "https://image.tmdb.org/t/p/w300_and_h450_bestv2/" +
+            this.results[i].poster_path;
+          // obj.title = this.results[i].title;
+          // obj.release_date = this.results[i].release_date;
+          // obj.popularity = this.results[i].popularity;
+          // obj.vote_count = this.results[i].vote_count;
+          // this.results[i] = obj;
+        }
+
+        console.log("length", this.results);
+      });
+  },
+  watch: {
+    search_query: function(val) {
+      this.process(val);
+    }
+  },
+  methods: {
+    process: function(val) {
+      this.doQuery();
+    },
+    doQuery: _.debounce(function() {
+      if (this.search_query) {
+        //console.log('searching for ' + this.search_query);
+        this.status = "Searching for " + this.search_query + "...";
+        $.ajax(
+          "https://api.themoviedb.org/3/" +
+            "search/movie?api_key=e93194759dc620e1ff7aa7c9fb0e02d8" +
+            "&q=" +
+            this.search_query
+        ).done(
+          function(res) {
+            //console.log("OK", res);
+            this.results = [];
+            for (var card in res.data) {
+              var e = res.data[card];
+              console.log(e);
+              this.results.push();
+            }
+          }.bind(this)
+        );
+      } else {
+        this.results = [];
+        this.status = "";
+      }
+    }, 750)
   }
+
+  // created() {
+  //   this.getapi();
+  //   // / this.getimage();
+  // },
+  // methods: {
+  //   getapi(infoUrl) {
+  //     console.log("this is infoUrl:::::::", infoUrl);
+  //     movieapi.getmovies(infoUrl).then(data => {
+  //       this.results = response.data.results;
+  //       console.log("this is demo");
+  //     });
+  //   }
+  // }
 };
 </script>
 

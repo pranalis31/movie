@@ -5,8 +5,8 @@ import store from "./store";
 import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-import VueAwesomeSwiper from 'vue-awesome-swiper';
-import 'swiper/dist/css/swiper.css';
+import VueAwesomeSwiper from "vue-awesome-swiper";
+import "swiper/dist/css/swiper.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 
@@ -99,10 +99,15 @@ library.add(
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
-
 Vue.use(VueAwesomeSwiper);
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
+
+Vue.filter("serveimg", function(value) {
+  //console.log("Image", value);
+  if (!value) return "";
+   return "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + value;
+});
 
 new Vue({
   router,
