@@ -106,7 +106,7 @@ Vue.config.productionTip = false;
 Vue.filter("serveimg", function(value) {
   //console.log("Image", value);
   if (!value) return "";
-   return "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + value;
+  return "https://image.tmdb.org/t/p/w300_and_h450_bestv2" + value;
 });
 
 new Vue({

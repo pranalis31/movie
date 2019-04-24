@@ -9,7 +9,7 @@
               type="search"
               placeholder="Search"
               aria-label="Search"
-              v-model="search_query"
+              v-model="infoUrl"
               v-on:keyup.enter="getapi(infoUrl)"
             />
             <button
@@ -184,11 +184,8 @@ import img2 from "../assets/images/card4.jpeg";
 import img3 from "../assets/images/card2.jpg";
 import img4 from "../assets/images/card5.jpg";
 import img5 from "../assets/images/card6.jpg";
-
 import movieapi from "@/services/movieapi";
-
 import axios from "axios";
-
 export default {
   data() {
     return {
@@ -228,19 +225,18 @@ export default {
         }
       ],
       results: [],
+      infourl: "",
       search_query: "",
       status: "",
       path: "https://image.tmdb.org/t/p/w300_and_h450_bestv2"
     };
   },
-
   mounted() {
     movieapi.getmovies();
     axios
       .get(
         "https://api.themoviedb.org/3/movie/popular?api_key=e93194759dc620e1ff7aa7c9fb0e02d8"
       )
-
       .then(response => {
         console.log("movieapi", response.data.results);
         this.results = response.data.results;
@@ -255,59 +251,23 @@ export default {
           // obj.vote_count = this.results[i].vote_count;
           // this.results[i] = obj;
         }
-
         console.log("length", this.results);
       });
   },
-  watch: {
-    search_query: function(val) {
-      this.process(val);
-    }
+
+  created() {
+    this.getapi();
+    // / this.getimage();
   },
   methods: {
-    process: function(val) {
-      this.doQuery();
-    },
-    doQuery: _.debounce(function() {
-      if (this.search_query) {
-        //console.log('searching for ' + this.search_query);
-        this.status = "Searching for " + this.search_query + "...";
-        $.ajax(
-          "https://api.themoviedb.org/3/" +
-            "search/movie?api_key=e93194759dc620e1ff7aa7c9fb0e02d8" +
-            "&q=" +
-            this.search_query
-        ).done(
-          function(res) {
-            //console.log("OK", res);
-            this.results = [];
-            for (var card in res.data) {
-              var e = res.data[card];
-              console.log(e);
-              this.results.push();
-            }
-          }.bind(this)
-        );
-      } else {
-        this.results = [];
-        this.status = "";
-      }
-    }, 750)
+    getapi(infoUrl) {
+      console.log("this is infoUrl:::::::", infoUrl);
+      movieapi.getmovies(infoUrl).then(data => {
+        this.results = response.data.results;
+        console.log("this is demo" + data);
+      });
+    }
   }
-
-  // created() {
-  //   this.getapi();
-  //   // / this.getimage();
-  // },
-  // methods: {
-  //   getapi(infoUrl) {
-  //     console.log("this is infoUrl:::::::", infoUrl);
-  //     movieapi.getmovies(infoUrl).then(data => {
-  //       this.results = response.data.results;
-  //       console.log("this is demo");
-  //     });
-  //   }
-  // }
 };
 </script>
 
