@@ -3,19 +3,37 @@ import axios from "axios";
 export default {
   getmovies(infoUrl) {
     console.log("movie api", infoUrl);
+    //  const board = this.props.routeParams.tag;
+    var config = {
+      headers: { "Access-Control-Allow-Origin": "*" }
+    };
+    //axios;
+    // .get("https://www.themoviedb.org/search?" + "query=" + infoUrl, config)
+    // .then(function(response) {
+    //   console.log("////////////", +response.data);
+    // })
     return (
       axios
-        // .get(`${"http://api.tvmaze.com/search/shows?" + "q="}${infoUrl}`)
-        .get("https://www.themoviedb.org/search?" + "query=" + infoUrl)
-        //.get("https://www.themoviedb.org/search/movie?" + "query=Hellboy")
-
-        //     return axios({
-        //             method: "get",
-        //           url: "http://api.tvmaze.com/search/shows?" + "q=" + this.infoUrl
-
-        .then(response => response.data)
-        .catch(error => error)
+        // .get("https://www.themoviedb.org/search?" + "query=" + infoUrl, {
+        //   headers: {
+        //     "Content-Type": "application/json"
+        //   }
+        // })
+        .get(
+          "${'https://cors-anywhere.herokuapp.com/'}https://www.themoviedb.org/search?" +
+            "query=" +
+            infoUrl,
+          {
+            headers: {
+              "Content-Type": "application/json"
+            }
+          }
+        )
+        // .then(response => response.data)
+        // .catch(error => error);
+        .then(response => {
+          console.log("response");
+        })
     );
-    //         })
   }
 };

@@ -232,7 +232,19 @@ export default {
     };
   },
   mounted() {
-    movieapi.getmovies();
+    var a;
+    movieapi.getmovies(a);
+    console.log("000000000", a);
+    //   movieapi.getmovies: (data, callback) => {
+    // return axios
+    // .get("https://api.themoviedb.org/3/movie/popular?api_key=e93194759dc620e1ff7aa7c9fb0e02d8")
+    // .then(responseData => {
+    // callback(responseData);
+    // })
+    // .catch(err => {
+    // callback(err);
+    // });
+    // },
     axios
       .get(
         "https://api.themoviedb.org/3/movie/popular?api_key=e93194759dc620e1ff7aa7c9fb0e02d8"
@@ -263,8 +275,8 @@ export default {
     getapi(infoUrl) {
       console.log("this is infoUrl:::::::", infoUrl);
       movieapi.getmovies(infoUrl).then(data => {
-        this.results = response.data.results;
-        console.log("this is demo" + data);
+        //this.results = response.data.results;
+        console.log("this is demo");
       });
     }
   }
